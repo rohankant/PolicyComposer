@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: white;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        label {
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="date"] {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        body {
+            background-image: url('/static/Specs.jpg');
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: rgba(192, 192, 192, 0.2);
+            padding: 20px;
+            margin: 10px;
+            width: calc(25% - 20px); /* Modified width to fit 4 cards on a line */
+            box-sizing: border-box;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+        }
+
+        .submit-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            shape-rendering: auto;
+        }
+
+        .banner {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            height: 40px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            display: none; /* Hide the banner by default */
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .card {
+                width: calc(33.33% - 20px);
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .card {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, {{ uname }}!</h1>
+    <form method="POST" action="">
+        <div class="card">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" pattern="[A-Za-z]+" title="Please enter a valid name (only alphabets)" required>
+        </div>
+        <div class="card">
+            <label for="sname">Surname:</label>
+            <input type="text" id="sname" name="sname" pattern="[A-Za-z]+" title="Please enter a valid surname (only alphabets)" required>
+        </div>
+        <div class="card">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div class="card">
+            <label for="postcode">Postcode:</label>
+            <input type="text" id="postcode" name="postcode" required>
+        </div>
+        <div class="card">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+        <div class="card">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+        <div class="card">
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" name="gender" required>
+        </div>
+        <div class="card">
+            <label for="height">Height:</label>
+            <input type="text" id="height" name="height" required>
+        </div>
+        <div class="submit-button">
+            <button type="submit">Update</button>
+        </div>
+    </form>
+
+    <!-- Add the banner element -->
+    <div class="banner" id="chatbot-banner">Here comes the chatbot</div>
+
+    <script>
+        // JavaScript to handle the banner pop-up functionality
+        document.getElementById('chatbot-banner').addEventListener('click', function() {
+            alert("Chatbot message goes here!");
+        });
+        // Show the banner after a certain delay (optional)
+        setTimeout(function() {
+            document.getElementById('chatbot-banner').style.display = 'block';
+        }, 3000); // Show the banner after 3 seconds (adjust the delay as needed)
+    </script>
+</body>
+</html>

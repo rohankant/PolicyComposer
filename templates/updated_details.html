@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        .container {
+            max-width: 500px;
+        }
+
+        .alert {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .alert-success {
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+            color: #3c763d;
+        }
+
+        .card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    flex: 0 0 calc(40% - 20px);
+}
+
+        .card-content {
+            margin-bottom: 0px;
+        }
+
+        .card-image {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Type of Insurance</h1>
+
+        <div class="alert alert-success">
+            User details have been successfully updated.
+        </div>
+
+        <h3>User Information:</h3>
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Name:</strong> {{ user.name }}</p>
+        <p><strong>Surname:</strong> {{ user.sname }}</p>
+        <p><strong>Address:</strong> {{ user.address }}</p>
+        <p><strong>Postcode:</strong> {{ user.postcode }}</p>
+        <p><strong>City:</strong> {{ user.city }}</p>
+        <p><strong>Country:</strong> {{ user.country }}</p>
+        <p><strong>Gender:</strong> {{ user.gender }}</p>
+        <p><strong>Height:</strong> {{ user.height }}</p>
+    </div>
+     <div class="cards-container">
+        <div class="card">
+            <div class="card-image">
+            <img src="{{ url_for('static', filename='Life.jpg') }}" alt="Life Insurance">
+            </div>
+            <div class="card-content">
+                <p>Life Insurance</p>
+                <a class="button" href="{{ url_for('life_insurance', username=user.username, password=user.password) }}">Proceed</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+            <img src="{{ url_for('static', filename='Motor.jpg') }}" alt="Motor Insurance">
+            </div>
+            <div class="card-content">
+                <p>Motor Insurance</p>
+                <a class="button" href="{{ url_for('motor_insurance', username=user.username, password=user.password) }}">Proceed</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+            <img src="{{ url_for('static', filename='Health.jpg') }}" alt="Health Insurance">
+            </div>
+            <div class="card-content">
+                <p>Health Insurance</p>
+                <a class="button" href="{{ url_for('health_insurance', username=user.username, password=user.password) }}">Proceed</a>
+            </div>
+        </div>
+
+         <div class="card">
+            <div class="card-image">
+            <img src="{{ url_for('static', filename='Home.jpg') }}" alt="Home Insurance">
+            </div>
+            <div class="card-content">
+                <p>Home Insurance</p>
+                <a class="button" href="{{ url_for('home_insurance', username=user.username, password=user.password) }}">Proceed</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
