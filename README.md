@@ -16,9 +16,9 @@ The site automatically calls a python code to add the user data onto a template 
 Download the entire project in a folder<br>
 update the Database location and insurance documents location in app.py <br>
 ```
-•pip install Flask
-•pip install Flask-SQLAlchemy
-•pip install PyPDF2<3.0
-•pip install reportlab
+pip install Flask
+pip install Flask-SQLAlchemy
+pip install PyPDF2<3.0
+pip install reportlab
 ```
 Now go the location of this folder and type "flask run"<br>
