@@ -1,7 +1,7 @@
 # PolicyComposer
 Flask App to accept user data and fill Insurance forms with it<br>
 Landing Page<br>
-![image](https://github.com/rohankant/PolicyComposer/assets/85503948/9cbf135a-e64a-4733-b56a-ed93176799de)<br>
+![image](https://github.com/rohankant/PolicyComposer/assets/85503948/c60837ee-6596-4505-9f9e-0ed73a4ca75c)
 User Registration <br>
 ![image](https://github.com/rohankant/PolicyComposer/assets/85503948/fb3853f8-6667-4dde-906b-c664fcf36bf0)<br>
 Login <br>
@@ -14,7 +14,7 @@ The site automatically calls a python code to add the user data onto a template 
 ![image](https://github.com/rohankant/PolicyComposer/assets/85503948/a1341d17-bdbc-42c7-9a97-11b96e07c61c)<br><br><br><br>
 # How to run this code:
 Download the entire project in a folder<br>
-update the Database location and insurance documents location in app.py <br>
+update the Database location in app.py <br>
 ```
 pip install Flask
 pip install Flask-SQLAlchemy
