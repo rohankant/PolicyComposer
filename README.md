@@ -21,4 +21,4 @@ pip install Flask-SQLAlchemy
 pip install PyPDF2<3.0
 pip install reportlab
 ```
-Now go the location of this folder and type "flask run"<br>
+Now go to the location of this folder and type "flask run"<br>
